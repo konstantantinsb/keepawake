@@ -1,0 +1,29 @@
+{
+  "app": {
+    "tooltip": "KeepAwake — stay-awake mode"
+  },
+  "menu": {
+    "header": "KeepAwake",
+    "status_active": "  ● ACTIVE — system won't sleep",
+    "status_inactive": "  ○ off",
+    "toggle": "On / Off",
+    "keep_display": "Keep display on",
+    "language": "Language",
+    "timer_header": "  Auto-off timer: {remaining}",
+    "timer_increment": "+ 0.5 h",
+    "timer_decrement": "− 0.5 h",
+    "timer_hint_infinite": "  (step 0.5 h · 0 = infinite)",
+    "timer_hint_set": "  (step 0.5 h · currently {hours:g} h)",
+    "exit": "Exit"
+  },
+  "timer": {
+    "infinite": "∞ (infinite)",
+    "expired": "expired",
+    "hours_minutes": "{h} h {m:02d} min",
+    "minutes": "{m} min"
+  },
+  "notification": {
+    "timer_expired_title": "KeepAwake",
+    "timer_expired_message": "Stay-awake mode disabled by timer"
+  }
+}

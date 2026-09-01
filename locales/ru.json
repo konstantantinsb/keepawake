@@ -1,0 +1,29 @@
+{
+  "app": {
+    "tooltip": "KeepAwake — режим бодрствования"
+  },
+  "menu": {
+    "header": "KeepAwake",
+    "status_active": "  ● АКТИВЕН — система не уснёт",
+    "status_inactive": "  ○ выключен",
+    "toggle": "Вкл / Выкл",
+    "keep_display": "Держать экран включённым",
+    "language": "Язык",
+    "timer_header": "  Таймер отключения: {remaining}",
+    "timer_increment": "+ 0.5 ч",
+    "timer_decrement": "− 0.5 ч",
+    "timer_hint_infinite": "  (шаг 0.5 ч · 0 = бесконечно)",
+    "timer_hint_set": "  (шаг 0.5 ч · сейчас {hours:g} ч)",
+    "exit": "Выход"
+  },
+  "timer": {
+    "infinite": "∞ (бесконечно)",
+    "expired": "истёк",
+    "hours_minutes": "{h} ч {m:02d} мин",
+    "minutes": "{m} мин"
+  },
+  "notification": {
+    "timer_expired_title": "KeepAwake",
+    "timer_expired_message": "Режим бодрствования выключен по таймеру"
+  }
+}
