@@ -34,6 +34,10 @@ from pystray import Icon, Menu, MenuItem
 
 import i18n
 
+# Версия — пишется в лог при старте, чтобы можно было проверить,
+# какая именно сборка запущена (помогает при путанице со старыми .exe).
+__version__ = "0.2.0"
+
 # ─── Windows API ────────────────────────────────────────────────────────────
 # Docs: https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setthreadexecutionstate
 ES_CONTINUOUS = 0x80000000
@@ -344,11 +348,12 @@ def main() -> int:
 
     log = _setup_logging()
     log.info("─" * 50)
-    log.info("KeepAwake starting (Python %s, pid=%d)", sys.version.split()[0], os.getpid())
+    log.info("KeepAwake v%s starting (Python %s, pid=%d, exe=%s)",
+             __version__, sys.version.split()[0], os.getpid(), sys.executable)
 
     # Загружаем i18n. Язык по умолчанию — English; пользователь меняет в меню.
     i18n.load(i18n.DEFAULT_LANG)
-    log.info("i18n loaded, default lang: %s", i18n.get_lang())
+    log.info("i18n loaded, default lang: %s (locales dir: %s)", i18n.get_lang(), i18n.LOCALES_DIR)
 
     state = KeepAwakeState(log)
     app = TrayApp(state)
